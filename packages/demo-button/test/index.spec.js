@@ -1,6 +1,4 @@
-import Button from 'components/demo-button';
-
-// vue-test-utils: https://163.lu/k/mUoEC4
+import Button from '../src';
 import { shallowMount } from '@vue/test-utils';
 
 describe('demo-button', () => {

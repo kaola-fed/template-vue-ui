@@ -1,4 +1,4 @@
-import Component from 'components/<%= componentName %>';
+import Component from '../index';
 
 // vue-test-utils: https://163.lu/k/mUoEC4
 import { shallowMount } from '@vue/test-utils';

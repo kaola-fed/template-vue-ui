@@ -1,32 +1,66 @@
 {
-  "name": "ui",
+  "name": "yui",
   "version": "0.0.1",
-  "main": ".eslintrc.js",
-  "directories": {
-    "example": "examples"
-  },
+  "private": true,
+  "license": "MIT",
+  "author": "kaola-fed",
+  "description": "yui",
   "scripts": {
-		"create:comp": "sao ./scripts/component-template",
+    "dev": "npm run storybook",
+    "storybook": "start-storybook -p 9001 -c ./.storybook",
+    "create:comp": "sao ./scripts/component-template",
+    "bootstrap": "yarn || npm i",
+    "lint": "eslint src/* --fix",
+    "precommit": "lint-staged",
+    "publish": "lerna publish",
+    "publish:beta": "lerna publish --canary=beta",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watchAll"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.52"
+  "lint-staged": {
+    "linters": {
+      "packages/**/*.{vue,js}": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
   },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.52",
-    "@babel/preset-env": "7.0.0-beta.52",
-    "@babel/preset-stage-2": "7.0.0-beta.52",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-console": "^1.0.4",
+    "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addon-options": "^3.4.8",
+    "@storybook/addon-storysource": "^3.4.8",
+    "@storybook/addon-viewport": "^3.4.8",
+    "@storybook/vue": "^3.4.8",
     "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "6.25.0",
+    "babel-eslint": "8.2.2",
     "babel-jest": "23.2.0",
+    "babel-plugin-istanbul": "4.1.4",
     "babel-plugin-module-resolver": "3.1.1",
+    "babel-preset-env": "1.7.0",
+    "eslint": "4.19.1",
+    "eslint-config-kaola": "0.1.3",
+    "eslint-plugin-html": "4.0.2",
+    "html-loader": "^0.5.5",
+    "husky": "0.14.3",
     "jest": "23.3.0",
     "lerna": "2.11.0",
-    "sao": "^0.22.17",
-    "vue-jest": "2.6.0"
+    "less": "^3.5.3",
+    "less-loader": "^4.1.0",
+    "lint-staged": "7.0.4",
+    "markdown-loader": "^3.0.0",
+    "sao": "0.22.17",
+    "storybook-readme": "^3.3.0",
+    "style-loader": "^0.21.0",
+    "vue": "2.5.16",
+    "vue-jest": "2.6.0",
+    "vue-loader": "15.2.4",
+    "vue-template-compiler": "2.5.16",
+    "vuex": "3.0.1"
   }
 }
