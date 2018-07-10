@@ -3,12 +3,7 @@
 ## start 
 
 ```bash
-brew install yarn
-
-yarn add --dev babel-jest babel-core@^7.0.0-0 @babel/core
-
-yarn install
-
+npm run bootstrap
 ```
 
 ### create new component
