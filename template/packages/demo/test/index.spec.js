@@ -1,10 +1,10 @@
-import Button from '../src';
+import Component from '../src';
 import { shallowMount } from '@vue/test-utils';
 
-describe('demo-button', () => {
+describe('demo', () => {
   it('renders props.label when passed', () => {
-    const label = 'button';
-    const wrapper = shallowMount(Button, {
+    const label = 'demo';
+    const wrapper = shallowMount(Component, {
       propsData: { label }
     })
     expect(wrapper.text()).toBe(label)

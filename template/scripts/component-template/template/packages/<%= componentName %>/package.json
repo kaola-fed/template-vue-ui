@@ -1,0 +1,9 @@
+{
+  "name": "<%= scope %>/<%= component %>",
+  "version": "0.0.1",
+  "files":[
+    "src",
+    "index.js",
+    "README.md"
+  ]
+}

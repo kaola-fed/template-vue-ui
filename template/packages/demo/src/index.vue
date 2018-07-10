@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'demo-button',
+    name: '<%= prefix %>-demo',
     props: {
         label: {
             type: String,

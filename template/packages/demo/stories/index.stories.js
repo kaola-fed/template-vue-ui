@@ -16,7 +16,7 @@ export const cases = {
                 [Component.name]: Component
             },
             template: `
-            <demo-button label="This is a button" :rounded="${rounded}" @click="onClick"></demo-button>
+            <<%= prefix %>-demo label="This is a button" :rounded="${rounded}" @click="onClick"></<%= prefix %>-demo>
             `,
             methods: {
                 onClick(e) {
