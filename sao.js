@@ -34,5 +34,5 @@ module.exports = {
       'gitignore': '.gitignore'
     });
   },
-  // installDependencies: true,
+  installDependencies: true,
 }
