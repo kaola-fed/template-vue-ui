@@ -18,7 +18,7 @@ sao kaola-fed/template-vue-ui [folderName] -u
 
 ### 组件开发
 
-在组件库项目跟目录下
+在组件库项目根目录下
 
 ```bash
 npm run create:comp
@@ -30,13 +30,13 @@ npm run create:comp
 
 目前，组件库里面已经集成了几种常用插件，可以根据需要进行修改：
 
-[@storybook/addon-knobs](https://github.com/storybooks/storybook/blob/master/addons/knobs/README.md)
-[@storybook/addon-actions](https://github.com/storybooks/storybook/blob/master/addons/actions/README.md)
-[storybook-readme](https://github.com/tuchk4/storybook-readme)
-[@storybook/addon-storysource](https://github.com/storybooks/storybook/blob/master/addons/storysource/README.md)
-[@storybook/addon-viewport](https://github.com/storybooks/storybook/blob/master/addons/viewport/README.md)
-[@storybook/addon-links](https://github.com/storybooks/storybook/blob/master/addons/links/README.md)
-[@storybook/addon-options](https://github.com/storybooks/storybook/blob/master/addons/options/README.md)
+- [@storybook/addon-knobs](https://github.com/storybooks/storybook/blob/master/addons/knobs/README.md)
+- [@storybook/addon-actions](https://github.com/storybooks/storybook/blob/master/addons/actions/README.md)
+- [storybook-readme](https://github.com/tuchk4/storybook-readme)
+- [@storybook/addon-storysource](https://github.com/storybooks/storybook/blob/master/addons/storysource/README.md)
+- [@storybook/addon-viewport](https://github.com/storybooks/storybook/blob/master/addons/viewport/README.md)
+- [@storybook/addon-links](https://github.com/storybooks/storybook/blob/master/addons/links/README.md)
+- [@storybook/addon-options](https://github.com/storybooks/storybook/blob/master/addons/options/README.md)
 
 ```bash
 npm run dev
@@ -54,7 +54,7 @@ npm run test
 
 组件库集成了 `commitlint` 和 `eslint`，代码提交前，不仅会进行代码风格检查，还会检查 commit message 的格式。
 
-commitlint 配置了 [Angular](https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular) 风格。
+commitlint 配置了 [@commitlint/config-angular](https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular) 风格。
 
 eslint 配置了 [eslint-config-kaola/next](https://github.com/kaola-fed/eslint-config-kaola)。
 
@@ -94,20 +94,6 @@ eslint 配置了 [eslint-config-kaola/next](https://github.com/kaola-fed/eslint-
 │           └── index.spec.js
 └── scripts
     └── component-template // 单个组件模版，可以修改每次新增的组件模版，自动引入 mixin、style 等
-        ├── helper.js
-        ├── sao.js
-        └── template
-            └── packages
-                └── <%=\ componentName\ %>
-                    ├── README.md
-                    ├── index.js
-                    ├── package.json
-                    ├── src
-                    │   └── index.vue
-                    ├── stories
-                    │   └── index.stories.js
-                    └── test
-                        └── index.spec.js
 ```
 
 ## 发布
@@ -118,8 +104,34 @@ eslint 配置了 [eslint-config-kaola/next](https://github.com/kaola-fed/eslint-
 npm run prerelease
 ```
 
-发布正式版，版本号 `x.x.x`，同时会收集 commit 信息更新到 CHANGELOG.md 上。
+发布正式版，版本号 `x.x.x`，同时会收集 commit 信息更新到 CHANGELOG.md 上。参考 [conventional-changelog-standard](https://github.com/bcoe/conventional-changelog-standard/blob/master/convention.md)
+
 
 ```bash
 npm run release
 ```
+
+## 你可能需要的查阅的资料
+
+### demo 相关
+
+- [storybook](https://github.com/storybooks/storybook)
+- [@storybook/addon-knobs](https://github.com/storybooks/storybook/blob/master/addons/knobs/README.md)
+- [@storybook/addon-actions](https://github.com/storybooks/storybook/blob/master/addons/actions/README.md)
+- [storybook-readme](https://github.com/tuchk4/storybook-readme)
+- [@storybook/addon-storysource](https://github.com/storybooks/storybook/blob/master/addons/storysource/README.md)
+- [@storybook/addon-viewport](https://github.com/storybooks/storybook/blob/master/addons/viewport/README.md)
+- [@storybook/addon-links](https://github.com/storybooks/storybook/blob/master/addons/links/README.md)
+- [@storybook/addon-options](https://github.com/storybooks/storybook/blob/master/addons/options/README.md)
+
+### 测试相关
+
+- [jest](https://jestjs.io)
+- [vue-test-utils](https://vue-test-utils.vuejs.org)
+
+### 工程相关
+
+- [lerna](https://github.com/lerna/lerna)
+- [@commitlint/config-angular](https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular)
+- [eslint-config-kaola/next](https://github.com/kaola-fed/eslint-config-kaola)
+- [conventional-changelog-standard](https://github.com/bcoe/conventional-changelog-standard/blob/master/convention.md)
