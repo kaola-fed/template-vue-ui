@@ -16,7 +16,9 @@ sao kaola-fed/template-vue-ui [folderName] -u
 
 输入 prefix 定义组件明年前缀，如 kl，新建组件时会自动命名为 kl-button、kl-modal 等。
 
-### 组件开发
+选择指定的 npm 源，npmjs、淘宝或 netease。
+
+## 组件开发
 
 在组件库项目根目录下
 
