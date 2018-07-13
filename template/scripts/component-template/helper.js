@@ -26,7 +26,7 @@ function getFiles(path, res = []) {
 
 function renderFilesPath(files, obj) {
   return files.reduce((res, file) => {
-    keys = file.match(/(?<=<%=\s*)([^<|%|\s]*)(?=\s*%>)/g) || [];
+    const keys = searchInString(/(?:<%=\s*)([^<|%|\s]*)(?:\s*%>)/g, file);
     const toFile = keys.reduce((f, k) => {
       const reg = new RegExp(`<%=\\s*${k}\\s*%>`, 'g');
       return f.replace(reg, obj[k]);
@@ -38,6 +38,15 @@ function renderFilesPath(files, obj) {
 
 function renderFolder(path, obj) {
   return renderFilesPath(getFiles(path), obj);
+}
+
+function searchInString(regex, str) {
+  let matches = [];
+  let match;
+  while (match = regex.exec(str)) {
+    matches.push(match[1]);
+  }
+  return matches;
 }
 
 module.exports = {
