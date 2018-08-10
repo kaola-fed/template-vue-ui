@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .u-demo-button {
     display: inline-block;
     height: 30px;

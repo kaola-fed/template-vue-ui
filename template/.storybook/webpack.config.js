@@ -11,11 +11,11 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       loaders: ["style-loader", "css-loader"]
     },
     {
-      test: /\.less$/,
+      test: /\.scss$/,
       use: [
         'vue-style-loader',
         'css-loader',
-        'less-loader'
+        'sass-loader'
       ]
     },
     {
