@@ -8,5 +8,6 @@ module.exports = {
   testPathIgnorePatterns: [
     'scripts',
     'node_modules',
-  ]
+  ],
+  testURL: 'http://localhost'
 }
