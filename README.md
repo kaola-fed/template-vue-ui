@@ -103,7 +103,7 @@ eslint 配置了 [eslint-config-kaola/next](https://github.com/kaola-fed/eslint-
 发布预发版，版本号 `x.x.x-beta.x`，npm `beta` 分支 。
 
 ```bash
-npm run prerelease
+npm run release:pre
 ```
 
 发布正式版，版本号 `x.x.x`，同时会收集 commit 信息更新到 CHANGELOG.md 上。参考 [conventional-changelog-standard](https://github.com/bcoe/conventional-changelog-standard/blob/master/convention.md)
