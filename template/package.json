@@ -15,7 +15,7 @@
     "precommit": "lint-staged",
     "release": "lerna publish --conventional-commits",
     "beta": "lerna publish --npm-tag=beta",
-    "prerelease": "lerna publish --npm-tag=beta --cd-version=prerelease",
+    "release:pre": "lerna publish --npm-tag=beta --cd-version=prerelease",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watchAll"
